@@ -35,4 +35,4 @@
 ## Contact
 
 - Email: abudahe634@gmail.com
-- GitHub: https://github.com/0604大和
+- GitHub: https://github.com/0604yamato
