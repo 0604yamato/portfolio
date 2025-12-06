@@ -29,13 +29,10 @@
 - 工夫点: 月100本規模の記事を想定したスプレッドシート連携・ログ設計 など
 - リポジトリ: （コードを公開できる場合、そのGitHub URL）
 
-### 3. その他の個人開発
-- ○○○（例: 音声文字起こしツール、スプレッドシート自動整理ツールなど）
-- リポジトリ: （GitHubのリンク）
 
 ---
 
 ## Contact
 
-- Email: xxxxx@example.com
-- GitHub: https://github.com/あなたのユーザー名
+- Email: abudahe634@gmail.com
+- GitHub: https://github.com/0604大和
