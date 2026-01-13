@@ -5286,7 +5286,7 @@ def enqueue_all_articles():
         image_folder_id = os.environ.get('IMAGE_FOLDER_ID')
 
         # Cloud Run URL
-        cloud_run_url = 'https://sharefull-article-automation-87257897217.asia-northeast1.run.app'
+        cloud_run_url = os.environ.get('CLOUD_RUN_URL', 'https://your-cloud-run-url.run.app')
 
         automation = ArticleAutomation(
             spreadsheet_id,
