@@ -1,0 +1,26 @@
+# 環境変数・機密情報
+.env
+.env.local
+LINE情報一式.txt
+
+# Node.js
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ログ
+*.log
+
+# Docker
+.dockerignore
+
+# Claude
+.claude/
+tmpclaude-*

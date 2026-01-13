@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サンプルクリニック チャットボット テスト</title>
+    <style>
+        body {
+            font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+            padding: 40px;
+            background: #ffffff;
+            color: #4a4a4a;
+        }
+        h1 {
+            color: #b8986b;
+        }
+        p {
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <h1>サンプルクリニック</h1>
+    <p>右下のチャットアイコンをクリックして、チャットボットをテストしてください。</p>
+    <p>例: 「診療時間を教えてください」「予約方法は？」「料金について知りたい」</p>
+
+    <!-- チャットボット埋め込みコード -->
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+      project-id="YOUR_PROJECT_ID"
+      agent-id="YOUR_AGENT_ID"
+      language-code="ja"
+      max-query-length="-1"
+      intent="WELCOME">
+      <df-messenger-chat-bubble
+        chat-title="サンプルクリニック">
+      </df-messenger-chat-bubble>
+    </df-messenger>
+
+    <style>
+      df-messenger {
+        z-index: 999;
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+
+        /* フォント - サイトに合わせた明朝系+ゴシック */
+        --df-messenger-font-color: #4a4a4a;
+        --df-messenger-font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+
+        /* 背景色 - 見やすいベージュ系 */
+        --df-messenger-chat-background: #f0ebe4;
+
+        /* メッセージ吹き出し */
+        --df-messenger-message-user-background: #d4c9bb;
+        --df-messenger-message-bot-background: #fdfcfa;
+
+        /* ヘッダー・ボタン - サイトのゴールド/ブラウン系 */
+        --df-messenger-button-titlebar-color: #b8986b;
+        --df-messenger-button-titlebar-font-color: #ffffff;
+
+        /* 送信ボタン */
+        --df-messenger-send-icon-color: #b8986b;
+
+        /* 入力欄 */
+        --df-messenger-input-box-color: #f5f0e8;
+        --df-messenger-input-font-color: #4a4a4a;
+        --df-messenger-input-placeholder-font-color: #a09080;
+
+        /* 外枠・ヘッダー背景 */
+        --df-messenger-chat-window-color: #f5f0e8;
+
+        /* チャットアイコン（右下のボタン） */
+        --df-messenger-chat-bubble-background: transparent;
+        --df-messenger-chat-bubble-icon-color: transparent;
+
+        /* その他 */
+        --df-messenger-chat-border-radius: 12px;
+        --df-messenger-message-border-radius: 12px;
+
+        /* チャットウィンドウサイズ */
+        --df-messenger-chat-window-width: 370px;
+
+        /* タイトル文字サイズ */
+        --df-messenger-titlebar-title-font-size: 15px;
+      }
+
+      df-messenger {
+        --df-messenger-default-titlebar-title-font-size: 15px;
+      }
+
+      df-messenger-chat-bubble {
+        --df-messenger-titlebar-title-font-size: 15px;
+      }
+    </style>
+
+</body>
+</html>

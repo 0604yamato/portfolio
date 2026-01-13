@@ -1,0 +1,35 @@
+# 環境変数・機密情報
+.env
+env.yaml
+env-vars.yaml
+*.json
+!package.json
+!appsscript.json
+
+# サービスアカウントキー
+service-account-key*.json
+*-credentials.json
+
+# 一時ファイル
+tmpclaude-*
+*.cwd
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ログ
+*.log
+debug_output.txt
+
+# その他
+*.m4a
+*.pdf
+*.zip

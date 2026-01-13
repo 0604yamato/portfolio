@@ -1,201 +1,59 @@
-# Portfolio - Yamato
+# Portfolio - DX・業務自動化プロジェクト集
 
-工学院大学 情報学部 情報通信工学科 3年（2027年卒予定）
+業務効率化とAI活用に特化したプロジェクトのポートフォリオです。
 
-クラウドや生成AIを活用した**業務自動化・DX推進**に強い関心を持ち、
-長期インターンでは実務レベルのシステム開発に取り組んでいます。
+## プロジェクト一覧
 
----
+### 1. SEO記事自動生成システム
+**[seo-article-generator/](./seo-article-generator/)**
 
-## Skills
+OpenAI GPT-4oとGoogle Cloud Runを活用した記事自動生成システム。
+- **成果**: 記事作成時間を3時間→30分に短縮（90%削減）、月50件以上の記事を自動生成
+- **技術**: Python, Flask, OpenAI API, Google Cloud Run, Google Apps Script
 
-### Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Google Apps Script](https://img.shields.io/badge/Google%20Apps%20Script-4285F4?style=flat-square&logo=google&logoColor=white)
+### 2. 業務自動化スイート
+**[business-automation/](./business-automation/)**
 
-### Cloud / AI
-![Google Cloud](https://img.shields.io/badge/Google%20Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
-![Vertex AI](https://img.shields.io/badge/Vertex%20AI-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+Google Apps ScriptとChatwork APIを活用した業務効率化ツール群。
+- 顧客アラート通知システム
+- インフルエンサー施策管理
+- 見積書管理システム
+- **技術**: Google Apps Script, Chatwork API, Google Sheets
 
-### Tools
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
+### 3. AIチャットボットシステム
+**[ai-chatbot/](./ai-chatbot/)**
 
----
+Dialogflow CXとVertex AI(Gemini)を活用した24時間対応チャットボット。
+- Webサイトへの1タグ埋め込み
+- LINE Bot連携
+- 自然言語理解による高精度な応答
+- **技術**: Node.js, Express, Dialogflow CX, Dify API, LINE Bot SDK, Docker
 
-## Project: SEO記事自動生成システム
+## 使用技術
 
-> OpenAI GPT-4o + Google Cloud Run による業務自動化
+### 言語
+- Python
+- JavaScript
+- Google Apps Script
 
-### 概要
+### クラウド・AI
+- Google Cloud Run
+- OpenAI GPT-4o
+- Vertex AI (Gemini)
+- Dialogflow CX
+- Dify
 
-SEO記事の作成プロセスを自動化するシステムを開発しました。
-キーワード分析から構成案作成、初稿生成までを一気通貫で自動化し、
-クライアントのメディア運営を効率化しています。
+### ツール
+- Docker
+- Git
 
-### システム構成
+## 開発者
 
-```
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│  Google Sheets  │────▶│   Cloud Run     │────▶│  Google Docs    │
-│  (見出し構造)    │     │  (Python API)   │     │  (生成記事)      │
-└─────────────────┘     └────────┬────────┘     └─────────────────┘
-                                 │
-                                 ▼
-                        ┌─────────────────┐
-                        │   OpenAI API    │
-                        │   (GPT-4o)      │
-                        └─────────────────┘
-```
-
-### 技術スタック
-
-| カテゴリ | 技術 |
-|---------|------|
-| 言語 | Python 3.11 |
-| AI/LLM | OpenAI API (GPT-4o) |
-| クラウド | Google Cloud Run |
-| API連携 | Google Sheets API, Google Docs API, Google Drive API, Search Console API |
-| コンテナ | Docker |
-| その他 | Google Apps Script |
-
-### 主な機能
-
-1. **SEO記事自動生成**: スプレッドシートの見出し構造から約6,000文字の記事を自動生成
-2. **Search Consoleキーワード分析**: 検索キーワードデータを自動取得・分析
-3. **ステータス管理**: 処理状況をスプレッドシートで自動更新
-4. **Cloud Run対応**: HTTPエンドポイントとして公開、スケーラブルに運用
-
-### 成果
-
-| 指標 | Before | After |
-|------|--------|-------|
-| 1記事あたりの作成時間 | 3時間 | **30分**（80%削減） |
-| 月間記事生成数 | - | **50記事以上** |
-
-### 工夫した点
-
-- **プロンプトエンジニアリング**: SEOに最適化された記事を安定生成するためのプロンプト設計
-- **エラーハンドリング**: API制限への対応（リトライロジック）、処理中断時の再開機能
-- **運用効率化**: Google Apps Scriptによるワンクリック実行、スプレッドシートでの進捗管理
-
----
-
-## Project: 業務自動化システム
-
-> Google Apps Script + Chatwork API による営業管理・業務効率化
-
-### 概要
-
-クライアント企業の営業管理業務を自動化するシステム群を開発しました。
-顧客対応の漏れ防止・データ管理の効率化を実現しています。
-
-### システム一覧
-
-| システム名 | 機能 |
-|-----------|------|
-| 顧客対応アラート通知 | 対応期限超過の顧客をChatworkに自動通知 |
-| 要対応リスト自動生成 | 対応が必要な顧客を専用シートに一覧表示 |
-| 見積書管理・データ同期 | 複数スプレッドシート間のデータ同期と履歴管理 |
-
-### 技術スタック
-
-| カテゴリ | 技術 |
-|---------|------|
-| 言語 | Google Apps Script (JavaScript) |
-| API連携 | Chatwork API, Google Sheets API |
-| 自動化 | 時間ベーストリガー、イベントトリガー |
-
-### 成果
-
-- 営業担当者の確認作業を自動化
-- 対応漏れの削減
-- データ管理の一元化
-
-[詳細はこちら](./business-automation/README.md)
-
----
-
-## Project: AIチャットボットシステム
-
-> Dialogflow CX + Vertex AI (Gemini) によるWebサイト埋め込み型チャットボット
-
-### 概要
-
-クライアント企業のWebサイト向けにAIチャットボットシステムを構築しました。
-生成AI（Gemini）を活用し、顧客からの問い合わせに24時間自動応答する仕組みを実現しています。
-
-### システム構成
-
-```
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│   Webサイト      │────▶│  Dialogflow CX  │────▶│   Vertex AI     │
-│ (df-messenger)  │     │    (Agent)      │     │   (Gemini)      │
-└─────────────────┘     └────────┬────────┘     └─────────────────┘
-                                 │
-                                 ▼
-                        ┌─────────────────┐
-                        │  ナレッジベース   │
-                        │  (Data Store)   │
-                        └─────────────────┘
-```
-
-### 技術スタック
-
-| カテゴリ | 技術 |
-|---------|------|
-| AI/LLM | Vertex AI (Gemini 2.5 Flash) |
-| 対話基盤 | Google Dialogflow CX (Playbook) |
-| ナレッジ | Data Store |
-| フロントエンド | df-messenger (Webウィジェット) |
-
-### 主な機能
-
-| 機能 | 説明 |
-|------|------|
-| 自然言語理解 | 生成AIによる意図理解・回答生成 |
-| ナレッジベース連携 | 企業情報を参照した正確な回答 |
-| 会話履歴管理 | セッション単位での会話継続 |
-| 簡単埋め込み | df-messengerによるワンタグ設置 |
-
-### 成果
-
-- **24時間対応**: 営業時間外の問い合わせにも即時回答
-- **業務負荷軽減**: 定型的な質問への自動応答
-
-### 工夫した点
-
-1. **ハルシネーション対策**: ナレッジベースに情報がない場合は「情報がない」と正直に回答するようプロンプト設計
-2. **トークン管理**: 会話履歴の長さに応じた適切なトークン制限設定
-3. **Temperature調整**: 安定した回答のため低めの値（0.3〜0.5）を設定
-
-[詳細はこちら](./chatbot-system/README.md)
-
----
-
-## Internship Experience
-
-| 期間 | 企業 | 業務内容 |
-|------|------|----------|
-| 2024年〜現在 | IT企業（長期インターン） | 生成AIを活用したDX推進、業務自動化システム開発 |
-
----
-
-## Education
-
-**工学院大学 情報学部 情報通信工学科**
-2023年4月入学（2027年3月卒業予定）
-
----
-
-## Contact
-
-- **Email**: abudahe634@gmail.com
+- **氏名**: 山本大和
+- **大学**: 工学院大学 情報学部 情報通信工学科（2027年卒業予定）
 - **GitHub**: [@0604yamato](https://github.com/0604yamato)
+- **Email**: abudahe634@gmail.com
 
----
+## ライセンス
 
-*このポートフォリオは随時更新しています*
+MIT License
