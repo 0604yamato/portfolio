@@ -49,7 +49,7 @@ Dialogflow CXとVertex AI(Gemini)を活用した24時間対応チャットボッ
 
 ## 開発者
 
-- **氏名**: 山本大和
+- **氏名**: 阿部大和
 - **大学**: 工学院大学 情報学部 情報通信工学科（2027年卒業予定）
 - **GitHub**: [@0604yamato](https://github.com/0604yamato)
 - **Email**: abudahe634@gmail.com
